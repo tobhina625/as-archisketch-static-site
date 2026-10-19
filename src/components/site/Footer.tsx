@@ -51,7 +51,17 @@ export function Footer() {
                 {CONTACT.whatsappDisplay}
               </a>
             </li>
-            <li>{CONTACT.location}</li>
+            <li>
+              {Array.isArray(CONTACT.location) ? (
+                CONTACT.location.map((line, idx) => (
+                  <span key={idx} className="block">
+                    {line}
+                  </span>
+                ))
+              ) : (
+                CONTACT.location
+              )}
+            </li>
             <li>{CONTACT.hours}</li>
           </ul>
         </div>

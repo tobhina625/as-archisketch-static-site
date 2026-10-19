@@ -195,7 +195,15 @@ export function Contact() {
                       <MapPin size={18} className="mt-0.5 shrink-0 text-accent" aria-hidden="true" />
                       <span>
                         <span className="block text-primary-foreground/60">Location</span>
-                        {CONTACT.location}
+                        {Array.isArray(CONTACT.location) ? (
+                          CONTACT.location.map((line, idx) => (
+                            <span key={idx} className="block">
+                              {line}
+                            </span>
+                          ))
+                        ) : (
+                          <span>{CONTACT.location}</span>
+                        )}
                       </span>
                     </li>
                     <li className="flex gap-3">
