@@ -7,7 +7,11 @@ export const CONTACT = {
   email: "archisketch.biz@gmail.com",
   whatsappNumber: "447769472838", // digits only, e.g. 923001234567
   whatsappDisplay: "+447769472838",
-  location: "London, United Kingdom",
+  location: [
+    "High Street Thornton Heath",
+    "CR7 8RU",
+    "United Kingdom (UK)",
+  ],
   hours: "Mon – Sat, 10:00 – 20:00",
   linkedin: "[LINKEDIN_URL]",
   instagram: "https://www.instagram.com/archisketch5?stkn=Mm5jeWlmaHNzenVv&utm_source=qr",
